@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | MY SITE</title>
+  <meta name="description" content="Contact page for MY SITE portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">MY<span>SITE</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Bosh sahifa</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">Men haqimda</a>
+        <a href="projects.html" class="nav-link" data-i18n="nav_projects">Loyihalar</a>
+        <a href="skills.html" class="nav-link" data-i18n="nav_skills">Ko'nikmalar</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">Aloqa</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="icon-btn" id="themeToggle" aria-label="Theme"><span id="themeIcon">🌙</span></button>
+        <button class="icon-btn" id="authBtn" data-i18n="nav_login">Kirish</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="section page-intro">
+      <div class="container small-container">
+        <p class="eyebrow" data-i18n="contact_title">Bog'lanish</p>
+        <h1 class="page-title" data-i18n="contact_title">Bog'lanish</h1>
+        <p class="section-sub" data-i18n="contact_sub">Men bilan bog'laning</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <div class="contact-links">
+          <a class="contact-item" href="https://t.me/" target="_blank" rel="noopener"><span class="ci-icon">✈️</span><div><strong>Telegram</strong><p>@username</p></div></a>
+          <a class="contact-item" href="https://instagram.com/" target="_blank" rel="noopener"><span class="ci-icon">📸</span><div><strong>Instagram</strong><p>@username</p></div></a>
+          <a class="contact-item" href="https://github.com/" target="_blank" rel="noopener"><span class="ci-icon">🐙</span><div><strong>GitHub</strong><p>@username</p></div></a>
+          <a class="contact-item" href="mailto:email@example.com"><span class="ci-icon">✉️</span><div><strong>Email</strong><p>email@example.com</p></div></a>
+        </div>
+
+        <form id="contactForm" class="contact-form card">
+          <input type="text" id="cName" data-i18n-placeholder="contact_name" placeholder="Ismingiz" required />
+          <input type="email" id="cEmail" data-i18n-placeholder="contact_email" placeholder="Email" required />
+          <textarea id="cMsg" rows="5" data-i18n-placeholder="contact_message" placeholder="Xabaringiz" required></textarea>
+          <button type="submit" class="btn btn-primary" data-i18n="contact_send">Yuborish</button>
+          <p id="contactStatus" class="form-status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> MY SITE. <span data-i18n="footer_rights">Barcha huquqlar himoyalangan.</span></p>
+    </div>
+  </footer>
+  <div class="toast" id="toast"></div>
+  <script src="js/site.js"></script>
+</body>
+</html>

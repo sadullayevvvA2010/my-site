@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | MY SITE</title>
+  <meta name="description" content="Login and register for MY SITE" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">MY<span>SITE</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Bosh sahifa</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">Men haqimda</a>
+        <a href="projects.html" class="nav-link" data-i18n="nav_projects">Loyihalar</a>
+        <a href="skills.html" class="nav-link" data-i18n="nav_skills">Ko'nikmalar</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">Aloqa</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="icon-btn" id="themeToggle" aria-label="Theme"><span id="themeIcon">🌙</span></button>
+        <button class="icon-btn" id="authBtn" data-i18n="nav_login">Kirish</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell auth-page">
+    <section class="section">
+      <div class="container login-shell">
+        <div class="auth-card">
+          <div class="auth-tabs">
+            <button class="auth-tab active" data-tab="login" data-i18n="auth_login">Kirish</button>
+            <button class="auth-tab" data-tab="register" data-i18n="auth_register">Ro'yxatdan o'tish</button>
+          </div>
+          <form id="loginForm" class="auth-form">
+            <input type="text" id="loginUser" data-i18n-placeholder="login_username" placeholder="Foydalanuvchi nomi" required />
+            <input type="password" id="loginPass" data-i18n-placeholder="login_password" placeholder="Parol" required />
+            <button type="submit" class="btn btn-primary" data-i18n="auth_login">Kirish</button>
+            <p class="auth-msg" id="loginMsg"></p>
+          </form>
+          <form id="registerForm" class="auth-form hidden">
+            <input type="text" id="regUser" data-i18n-placeholder="register_username" placeholder="Foydalanuvchi nomi" required />
+            <input type="password" id="regPass" data-i18n-placeholder="register_password" placeholder="Parol" required />
+            <button type="submit" class="btn btn-primary" data-i18n="auth_register">Ro'yxatdan o'tish</button>
+            <p class="auth-msg" id="regMsg"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> MY SITE. <span data-i18n="footer_rights">Barcha huquqlar himoyalangan.</span></p>
+    </div>
+  </footer>
+  <div class="toast" id="toast"></div>
+  <script src="js/site.js"></script>
+</body>
+</html>

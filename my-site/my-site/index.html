@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MY SITE — Frontend Developer</title>
+  <meta name="description" content="Shaxsiy portfolio — Frontend Developer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">MY<span>SITE</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Bosh sahifa</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">Men haqimda</a>
+        <a href="projects.html" class="nav-link" data-i18n="nav_projects">Loyihalar</a>
+        <a href="skills.html" class="nav-link" data-i18n="nav_skills">Ko'nikmalar</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">Aloqa</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="icon-btn" id="themeToggle" aria-label="Theme"><span id="themeIcon">🌙</span></button>
+        <button class="icon-btn" id="authBtn" data-i18n="nav_login">Kirish</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-hello" data-i18n="home_hello">Salom, men</p>
+          <h1 class="hero-name">Aziz Karimov</h1>
+          <h2 class="hero-role" data-i18n="home_role">Frontend Developer</h2>
+          <p class="hero-desc" data-i18n="home_desc">Zamonaviy, tez va foydalanuvchiga qulay veb-saytlar yarataman. HTML, CSS, JavaScript va React bilan ishlayman.</p>
+          <div class="hero-actions">
+            <a href="projects.html" class="btn btn-primary" data-i18n="home_btn_projects">Loyihalarim</a>
+            <a href="contact.html" class="btn btn-outline" data-i18n="home_btn_contact">Bog'lanish</a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://t.me/" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <div class="photo-frame">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=600&q=80" alt="Profil" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="about_title">Men haqimda</h2>
+        <p class="section-sub" data-i18n="about_sub">Tanishuv, qiziqishlar va maqsadlar</p>
+        <div class="about-grid">
+          <div class="card">
+            <h3 data-i18n="about_who">Men haqimda</h3>
+            <p data-i18n="about_who_text">2 yillik tajribaga ega frontend dasturchiman. Toza kod va chiroyli interfeys yaratishga ishtiyoqliman.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="about_interests">Qiziqishlarim</h3>
+            <p data-i18n="about_interests_text">Veb-texnologiyalar, UI/UX dizayn, ochiq kodli loyihalar va yangi frameworklarni o'rganish.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="about_goals">Maqsadlarim</h3>
+            <p data-i18n="about_goals_text">Xalqaro loyihalarda ishlash va yuqori sifatli mahsulotlar yaratish.</p>
+          </div>
+          <div class="card">
+            <h3 data-i18n="about_knowledge">Bilimlarim</h3>
+            <p data-i18n="about_knowledge_text">HTML5, CSS3, JavaScript (ES6+), React, Git, GitHub va responsiv dizayn.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="projects_title">Mening loyihalarim</h2>
+        <p class="section-sub" data-i18n="projects_sub">Men yaratgan ishlar</p>
+        <div id="projectAdmin" class="admin-panel hidden">
+          <h3 data-i18n="projects_admin">Loyiha qo'shish</h3>
+          <form id="projectForm" class="admin-form">
+            <input type="text" id="pName" data-i18n-placeholder="project_name" placeholder="Loyiha nomi" required />
+            <input type="text" id="pDesc" data-i18n-placeholder="project_desc" placeholder="Qisqacha tavsif" required />
+            <input type="text" id="pTech" data-i18n-placeholder="project_tech" placeholder="Texnologiyalar (vergul bilan)" required />
+            <input type="url" id="pImage" data-i18n-placeholder="project_image" placeholder="Rasm URL" />
+            <input type="url" id="pDemo" data-i18n-placeholder="project_demo_url" placeholder="Live Demo URL" />
+            <input type="url" id="pGithub" data-i18n-placeholder="project_github_url" placeholder="GitHub URL" />
+            <button type="submit" class="btn btn-primary" data-i18n="projects_add">Qo'shish</button>
+          </form>
+        </div>
+        <div id="projectsGrid" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="skills_title">Ko'nikmalarim</h2>
+        <p class="section-sub" data-i18n="skills_sub">Men ishlaydigan texnologiyalar</p>
+        <div class="skills-grid">
+          <div class="skill-card"><span class="skill-icon">🌐</span><h3>HTML5</h3><div class="bar"><div class="bar-fill" data-width="95%"></div></div></div>
+          <div class="skill-card"><span class="skill-icon">🎨</span><h3>CSS3</h3><div class="bar"><div class="bar-fill" data-width="90%"></div></div></div>
+          <div class="skill-card"><span class="skill-icon">⚡</span><h3>JavaScript</h3><div class="bar"><div class="bar-fill" data-width="85%"></div></div></div>
+          <div class="skill-card"><span class="skill-icon">⚛️</span><h3>React</h3><div class="bar"><div class="bar-fill" data-width="80%"></div></div></div>
+          <div class="skill-card"><span class="skill-icon">🔧</span><h3>Git</h3><div class="bar"><div class="bar-fill" data-width="85%"></div></div></div>
+          <div class="skill-card"><span class="skill-icon">🐙</span><h3>GitHub</h3><div class="bar"><div class="bar-fill" data-width="85%"></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title" data-i18n="contact_title">Bog'lanish</h2>
+        <p class="section-sub" data-i18n="contact_sub">Men bilan bog'laning</p>
+        <div class="contact-grid">
+          <div class="contact-links">
+            <a class="contact-item" href="https://t.me/" target="_blank" rel="noopener"><span class="ci-icon">✈️</span><div><strong>Telegram</strong><p>@username</p></div></a>
+            <a class="contact-item" href="https://instagram.com/" target="_blank" rel="noopener"><span class="ci-icon">📸</span><div><strong>Instagram</strong><p>@username</p></div></a>
+            <a class="contact-item" href="https://github.com/" target="_blank" rel="noopener"><span class="ci-icon">🐙</span><div><strong>GitHub</strong><p>@username</p></div></a>
+            <a class="contact-item" href="mailto:email@example.com"><span class="ci-icon">✉️</span><div><strong>Email</strong><p>email@example.com</p></div></a>
+          </div>
+          <form id="contactForm" class="contact-form card">
+            <input type="text" id="cName" data-i18n-placeholder="contact_name" placeholder="Ismingiz" required />
+            <input type="email" id="cEmail" data-i18n-placeholder="contact_email" placeholder="Email" required />
+            <textarea id="cMsg" rows="5" data-i18n-placeholder="contact_message" placeholder="Xabaringiz" required></textarea>
+            <button type="submit" class="btn btn-primary" data-i18n="contact_send">Yuborish</button>
+            <p id="contactStatus" class="form-status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> MY SITE. <span data-i18n="footer_rights">Barcha huquqlar himoyalangan.</span></p>
+    </div>
+  </footer>
+
+  <div class="modal" id="authModal">
+    <div class="modal-box">
+      <button class="modal-close" id="closeAuth">✕</button>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login" data-i18n="auth_login">Kirish</button>
+        <button class="auth-tab" data-tab="register" data-i18n="auth_register">Ro'yxatdan o'tish</button>
+      </div>
+      <form id="loginForm" class="auth-form">
+        <input type="text" id="loginUser" data-i18n-placeholder="login_username" placeholder="Foydalanuvchi nomi" required />
+        <input type="password" id="loginPass" data-i18n-placeholder="login_password" placeholder="Parol" required />
+        <button type="submit" class="btn btn-primary" data-i18n="auth_login">Kirish</button>
+        <p class="auth-msg" id="loginMsg"></p>
+      </form>
+      <form id="registerForm" class="auth-form hidden">
+        <input type="text" id="regUser" data-i18n-placeholder="register_username" placeholder="Foydalanuvchi nomi" required />
+        <input type="password" id="regPass" data-i18n-placeholder="register_password" placeholder="Parol" required />
+        <button type="submit" class="btn btn-primary" data-i18n="auth_register">Ro'yxatdan o'tish</button>
+        <p class="auth-msg" id="regMsg"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="adminModal">
+    <div class="modal-box admin-box">
+      <button class="modal-close" id="closeAdmin">✕</button>
+      <h3 data-i18n="admin_title">Admin Dashboard</h3>
+      <p class="admin-welcome">Xush kelibsiz, <strong id="adminName"></strong></p>
+      <div class="admin-section">
+        <h4 data-i18n="admin_profile">Profilni tahrirlash</h4>
+        <form id="profileForm" class="admin-form">
+          <input type="text" id="pfName" data-i18n-placeholder="profile_name" placeholder="Ism" />
+          <input type="text" id="pfRole" data-i18n-placeholder="profile_role" placeholder="Kasb" />
+          <input type="text" id="pfBio" data-i18n-placeholder="profile_bio" placeholder="Qisqacha tanishtiruv" />
+          <button type="submit" class="btn btn-primary" data-i18n="admin_save">Saqlash</button>
+          <p class="form-status" id="profileStatus"></p>
+        </form>
+      </div>
+      <div class="admin-section">
+        <h4 data-i18n="admin_projects">Loyihalarni boshqarish</h4>
+        <div id="adminProjectsList" class="admin-projects-list"></div>
+      </div>
+      <button class="btn btn-outline full" id="logoutBtn" data-i18n="admin_logout">Chiqish</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="js/site.js"></script>
+</body>
+</html>

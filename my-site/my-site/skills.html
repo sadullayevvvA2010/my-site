@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | MY SITE</title>
+  <meta name="description" content="Skills page for MY SITE portfolio" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">MY<span>SITE</span></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link" data-i18n="nav_home">Bosh sahifa</a>
+        <a href="about.html" class="nav-link" data-i18n="nav_about">Men haqimda</a>
+        <a href="projects.html" class="nav-link" data-i18n="nav_projects">Loyihalar</a>
+        <a href="skills.html" class="nav-link" data-i18n="nav_skills">Ko'nikmalar</a>
+        <a href="contact.html" class="nav-link" data-i18n="nav_contact">Aloqa</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="icon-btn" id="themeToggle" aria-label="Theme"><span id="themeIcon">🌙</span></button>
+        <button class="icon-btn" id="authBtn" data-i18n="nav_login">Kirish</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section class="section page-intro">
+      <div class="container small-container">
+        <p class="eyebrow" data-i18n="skills_title">Ko'nikmalar</p>
+        <h1 class="page-title" data-i18n="skills_title">Ko'nikmalarim</h1>
+        <p class="section-sub" data-i18n="skills_sub">Men ishlaydigan texnologiyalar</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="skills-grid">
+          <div class="skill-card"><span class="skill-icon">🌐</span><h3>HTML5</h3><div class="bar"><div class="bar-fill" data-width="95%"></div></div></div>
+          <div class="skill-card"><span class="skill-icon">🎨</span><h3>CSS3</h3><div class="bar"><div class="bar-fill" data-width="90%"></div></div></div>
+          <div class="skill-card"><span class="skill-icon">⚡</span><h3>JavaScript</h3><div class="bar"><div class="bar-fill" data-width="85%"></div></div></div>
+          <div class="skill-card"><span class="skill-icon">⚛️</span><h3>React</h3><div class="bar"><div class="bar-fill" data-width="80%"></div></div></div>
+          <div class="skill-card"><span class="skill-icon">🔧</span><h3>Git</h3><div class="bar"><div class="bar-fill" data-width="85%"></div></div></div>
+          <div class="skill-card"><span class="skill-icon">🐙</span><h3>GitHub</h3><div class="bar"><div class="bar-fill" data-width="85%"></div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> MY SITE. <span data-i18n="footer_rights">Barcha huquqlar himoyalangan.</span></p>
+    </div>
+  </footer>
+  <div class="toast" id="toast"></div>
+  <script src="js/site.js"></script>
+</body>
+</html>
